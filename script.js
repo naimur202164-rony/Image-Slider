@@ -1,75 +1,42 @@
-// let idx = 0
-
-// let interval = setInterval(run, 2000)
-
-// function run() {
-//     idx++
-//     changeImage()
-// }
-
-// function changeImage() {
-//     if(idx > img.length - 1) {
-//         idx = 0
-//     } else if(idx < 0) {
-//         idx = img.length - 1
-//     }
-
-//     imgs.style.transform = `translateX(${-idx * 500}px)`
-// }
-
-// function resetInterval() {
-//     clearInterval(interval)
-//     interval = setInterval(run, 2000)
-// }
-
-// rightBtn.addEventListener('click', () => {
-//     idx++
-//     changeImage()
-//     resetInterval()
-// })
-
-// leftBtn.addEventListener('click', () => {
-//     idx--
-//     changeImage()
-//     resetInterval()
-// })
-
-// Selecting From the Dom
-
 const imgs = document.getElementById("imgs");
 const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");
 const img = document.querySelectorAll("#imgs img");
-console.log(img);
 
-// Index
-let idx = 0;
+let idx = 0
 
-let interval = setInterval(run, 2000);
+let interval = setInterval(run, 2000)
 
-// run function
-const run = () => {
-  idx++;
-  changeImage()
-};
+function run() {
+    idx++
+    changeImage()
+}
 
-// Change Image
-console.log(img.length);
-console.log(idx);
-// Image Change Logic
-const changeImage = () => {
+function changeImage() {
     if(idx > img.length - 1) {
-                 idx = 0
-             } else if(idx < 0) {
-               idx = img.length - 1
-             }
-          imgs.style.transform = `translateX(${-idx * 500}px)`
-};
+        idx = 0
+    } else if(idx < 0) {
+        idx = img.length - 1
+    }
 
+    imgs.style.transform = `translateX(${-idx * 500}px)`
+}
 
-// Right-button
+function resetInterval() {
+    clearInterval(interval)
+    interval = setInterval(run, 2000)
+}
 
-rightBtn.addEventListener('click',()=>{
-    idx++,
-    changeImage(),
+rightBtn.addEventListener('click', () => {
+    idx++
+    changeImage()
+    resetInterval()
 })
+
+leftBtn.addEventListener('click', () => {
+    idx--
+    changeImage()
+    resetInterval()
+})
+
+// Selecting From the Dom

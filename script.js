@@ -56,4 +56,12 @@ const run=()=>{
 
 
 // Change Image
+console.log(img.length)
+console.log(idx)
+const changeImage=()=>{
+    if(idx>img.length-1){
+            idx=0;
+    }
+}
+
 

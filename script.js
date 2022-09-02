@@ -39,3 +39,9 @@
 //     changeImage()
 //     resetInterval()
 // })
+
+// Selecting From the Dom
+
+
+
+const imgs=document.getElementById('imgs')

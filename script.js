@@ -46,3 +46,14 @@ console.log(img)
 // Index
 let idx=0;
 
+let interval =setInterval(run,2000);
+
+// run function
+const run=()=>{
+    idx++
+}
+
+
+
+// Change Image
+

@@ -24,3 +24,16 @@ img {
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
 }
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: rgb(209, 67, 67);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  width: 40%;
+  cursor: pointer;
+}

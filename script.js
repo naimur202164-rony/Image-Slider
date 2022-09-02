@@ -1,4 +1,3 @@
-
 // let idx = 0
 
 // let interval = setInterval(run, 2000)
@@ -37,31 +36,31 @@
 
 // Selecting From the Dom
 
-const imgs = document.getElementById('imgs')
-const leftBtn = document.getElementById('left')
-const rightBtn = document.getElementById('right')
-const img = document.querySelectorAll('#imgs img')
-console.log(img)
+const imgs = document.getElementById("imgs");
+const leftBtn = document.getElementById("left");
+const rightBtn = document.getElementById("right");
+const img = document.querySelectorAll("#imgs img");
+console.log(img);
 
 // Index
-let idx=0;
+let idx = 0;
 
-let interval =setInterval(run,2000);
+let interval = setInterval(run, 2000);
 
 // run function
-const run=()=>{
-    idx++
-}
-
-
+const run = () => {
+  idx++;
+};
 
 // Change Image
-console.log(img.length)
-console.log(idx)
-const changeImage=()=>{
-    if(idx>img.length-1){
-            idx=0;
-    }
-}
-
-
+console.log(img.length);
+console.log(idx);
+// Image Change Logic
+const changeImage = () => {
+  if (idx > img.length - 1) {
+    idx = 0;
+  } else if (idx < 0) {
+    idx = img.length - 1;
+  }
+  imgs.style.transform = `translateX(${-idx * 500}px)`
+};
